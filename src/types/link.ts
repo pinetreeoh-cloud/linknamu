@@ -7,5 +7,5 @@ export type LinkItem = {
 export type Profile = {
   name: string;
   bio: string;
-  avatarUrl?: string;
+  avatarUrls?: string[];
 };
