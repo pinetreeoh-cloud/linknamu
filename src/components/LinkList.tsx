@@ -44,9 +44,10 @@ export default function LinkList({ links }: { links: LinkItem[] }) {
   };
 
   return (
-    <ul className="flex w-full flex-col gap-4">
+    // 가운데 열의 폭을 모든 카드가 공유해, 제목 묶음은 카드 가운데에 두고 시작점은 서로 맞춘다.
+    <ul className="grid w-full grid-cols-[1fr_auto_1fr] gap-y-4">
       {links.map((link) => (
-        <li key={link.id}>
+        <li key={link.id} className="col-span-3 grid grid-cols-subgrid">
           <LinkCard
             link={link}
             count={counts[link.id] ?? 0}

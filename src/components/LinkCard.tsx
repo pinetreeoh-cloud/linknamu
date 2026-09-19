@@ -19,9 +19,9 @@ export default function LinkCard({
       onAuxClick={(e) => {
         if (e.button === 1) onOpen();
       }}
-      className="relative block w-full rounded-2xl border border-white/70 bg-white/40 px-6 py-4 text-center text-[15px] font-medium text-stone-800 shadow-[0_8px_28px_-10px_rgba(190,110,50,0.25)] backdrop-blur-xl transition duration-200 hover:bg-white/60 hover:shadow-[0_12px_32px_-10px_rgba(190,110,50,0.3)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400 active:bg-white/50 motion-reduce:transition-none"
+      className="relative col-span-3 grid grid-cols-subgrid rounded-2xl border border-white/70 bg-white/40 py-4 text-left text-[15px] font-medium text-stone-800 shadow-[0_8px_28px_-10px_rgba(190,110,50,0.25)] backdrop-blur-xl transition duration-200 hover:bg-white/60 hover:shadow-[0_12px_32px_-10px_rgba(190,110,50,0.3)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400 active:bg-white/50 motion-reduce:transition-none"
     >
-      {link.title}
+      <span className="col-start-2">{link.title}</span>
       <span className="absolute right-5 top-1/2 -translate-y-1/2 text-xs font-normal tabular-nums text-stone-500">
         {count.toLocaleString("ko-KR")}회
       </span>
